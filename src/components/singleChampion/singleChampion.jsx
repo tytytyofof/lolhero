@@ -11,7 +11,7 @@ const SingleChampion = () => {
   const [skillDesc, setskillDesc] = useState()
   const [skillVideo, setskillVideo] = useState()
   const [activeChampion, setactiveChampoion] = useState({})
-  const { name, img, role, description, skils } = activeChampion
+  const { name, img, role, description, skils, difficulty } = activeChampion
 
 
   const getActiveChampion = (champ) => {
@@ -71,6 +71,31 @@ const SingleChampion = () => {
 
 
 
+  const SetDifficutly = () => { 
+
+    switch (difficulty) {
+      case 'high':
+         return <><div className="squere plus"> </div>
+         <div className="squere plus"> </div>
+         <div className="squere plus"> </div></>;
+            
+      
+      case 'mid': 
+        return <><div className="squere plus"> </div>
+        <div className="squere plus"> </div>
+        <div className="squere "> </div></>;
+
+      default: 
+        return <><div className="squere plus"> </div>
+        <div className="squere "> </div>
+        <div className="squere "> </div></>;
+    }
+
+                    
+  }
+
+
+
 
 
   return (
@@ -115,9 +140,7 @@ const SingleChampion = () => {
 
                 <li className="difficutly">
                   <div className="level role__img">
-                    <div className="squere plus"> </div>
-                    <div className="squere"> </div>
-                    <div className="squere"> </div>
+                    <SetDifficutly/>
                   </div>
                   <h2 className="spec__title">DIFFICULTY</h2>
                   <span className="spec__desc">HIGH</span>
