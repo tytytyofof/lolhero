@@ -71,24 +71,31 @@ const SingleChampion = () => {
 
 
 
+
+  
+
+
+
   const SetDifficutly = () => { 
+
+    const spanDifficulty = (mid, high) => {
+      return (
+        <><div className="squere plus"> </div>
+          <div className={'squere ' + mid}> </div>
+          <div className={'squere ' + high}> </div></>
+      )
+    }
 
     switch (difficulty) {
       case 'high':
-         return <><div className="squere plus"> </div>
-         <div className="squere plus"> </div>
-         <div className="squere plus"> </div></>;
+         return spanDifficulty('plus', 'plus');
             
       
       case 'mid': 
-        return <><div className="squere plus"> </div>
-        <div className="squere plus"> </div>
-        <div className="squere "> </div></>;
+        return spanDifficulty('plus') ;
 
       default: 
-        return <><div className="squere plus"> </div>
-        <div className="squere "> </div>
-        <div className="squere "> </div></>;
+        return spanDifficulty();
     }
 
                     
@@ -143,7 +150,7 @@ const SingleChampion = () => {
                     <SetDifficutly/>
                   </div>
                   <h2 className="spec__title">DIFFICULTY</h2>
-                  <span className="spec__desc">HIGH</span>
+                  <span className="spec__desc">{difficulty}</span>
                 </li>
               </ul>
 
