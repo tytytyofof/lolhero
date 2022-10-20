@@ -78,7 +78,7 @@ const SingleChampion = () => {
 
   const SetDifficutly = () => { 
 
-    const spanDifficulty = (mid, high) => {
+    const spanDifficulty = (mid = '', high = '') => {
       return (
         <><div className="squere plus"> </div>
           <div className={'squere ' + mid}> </div>
@@ -99,6 +99,41 @@ const SingleChampion = () => {
     }
 
                     
+  }
+
+
+  const SetroleImg = () => {
+
+      const roleimg = (rolesrc) => {
+        return(
+          <img
+          src={rolesrc}
+          alt=""
+          className="role__img"
+        />
+        )
+      }
+
+    switch (role) {
+      case "mage":
+        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-mage.png')
+      case "assasin":
+        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-assassin.png')
+      case "fighter":
+        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-fighter.png')
+      case "marksman":
+        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-marksman.png')
+      case "tank":
+        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-tank.png')
+      case 'support':
+        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-support.png')
+        
+    
+      default:
+       
+    }
+
+
   }
 
 
@@ -136,11 +171,7 @@ const SingleChampion = () => {
             <div className="champion__info-inner">
               <ul className="champion__spec">
                 <li className="role">
-                  <img
-                    src="https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-support.png"
-                    alt=""
-                    className="role__img"
-                  />
+                  <SetroleImg/>
                   <h2 className="spec__title">role</h2>
                   <span className="spec__desc">{role}</span>
                 </li>

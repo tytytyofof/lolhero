@@ -5,7 +5,7 @@
             "name": "Aatrox",
             "difficulty": "mid",
             "description": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.",
-            "role": "tank",
+            "role": "fighter",
             "img": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
             "skils": [
                 {
@@ -124,7 +124,7 @@
             "id": "4",
             "name": "Aphelios",
             "description": "Emerging from moonlight's shadow with weapons drawn, Aphelios  kills the enemies of his faith in brooding silence—speaking only through the certainty of his aim, and the firing of each gun. Though fueled by a poison that renders him mute, he is guided byhis sister Alune. From her distant temple sanctuary, she pushes an arsenal of moonstone weapons into his hands. For as long asthe moon shines overhead, Aphelios will never be alone.",
-            "role": "assasin",
+            "role": "marksman",
             "difficulty": "high",
             "img": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg",
             "skils": [
