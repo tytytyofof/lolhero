@@ -28,7 +28,10 @@ const SingleChampion = () => {
 
 
   useEffect(() => {
-    getChampion(heroId).then(res => { getActiveChampion(res); setskillName(res.skils[0].name); setskillDesc(res.skils[0].description); setskillVideo(res.skils[0].video) });
+    getChampion(heroId).then(res => { getActiveChampion(res);
+       setskillName(res.skils[0].name);
+        setskillDesc(res.skils[0].description);
+         setskillVideo(res.skils[0].video) });
   }, []);
 
   useEffect(() => {
@@ -42,12 +45,12 @@ const SingleChampion = () => {
   const focusOnItem = (id) => {
     itemRef.current.forEach(item => item.classList.remove('active'));
     itemRef.current[id].classList.add('active')
+    console.log(id);
   }
   const activeSkill = (key) => {
     setskillName(skils[key].name)
     setskillDesc(skils[key].description)
     setskillVideo(skils[key].video)
-    console.log(skillVideo);
   }
   const elem = activeChampion.skils && activeChampion.skils.map((item, i) => {
 
@@ -114,19 +117,21 @@ const SingleChampion = () => {
         )
       }
 
+     const src = 'https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-'
+
     switch (role) {
       case "mage":
-        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-mage.png')
+        return roleimg(src + 'mage.png')
       case "assasin":
-        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-assassin.png')
+        return roleimg(src + 'assassin.png')
       case "fighter":
-        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-fighter.png')
+        return roleimg(src + 'fighter.png')
       case "marksman":
-        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-marksman.png')
+        return roleimg(src + 'marksman.png')
       case "tank":
-        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-tank.png')
+        return roleimg(src + 'tank.png')
       case 'support':
-        return roleimg('https://raw.communitydragon.org/9.4/plugins/rcp-fe-lol-champion-details/global/default/role-icon-support.png')
+        return roleimg(src + 'support.png')
         
     
       default:
@@ -194,7 +199,7 @@ const SingleChampion = () => {
 
             <div className="champion__footer">
               <p className="footer__title">CHAMPION MASTERY</p>
-              <a href="">OP.GG</a>
+              <a href="https://www.op.gg/">OP.GG</a>
               <a href="">U.GG</a>
               <a href="">PROBUILDS.NET</a>
             </div>

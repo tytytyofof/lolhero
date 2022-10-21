@@ -32,6 +32,7 @@
   filter: blur(8px);
   object-fit: cover;
   opacity: 0.36;
+  
 
 
 }
@@ -174,7 +175,7 @@
 .champion__footer::before {
   content: "";
   position: absolute;
-  bottom: 41px;
+  bottom: 29px;
   width: calc(100% - 2px);
   height: 1px;
   background: rgba(255, 255, 255, 0.2);
@@ -184,7 +185,7 @@
 .champion__footer::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -7px;
   width: calc(100% - 2px);
   height: 1px;
   background: rgba(255, 255, 255, 0.2);
@@ -327,6 +328,8 @@
   height: 440px;
   width: 770px;
   margin-top: 100px;
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  outline-offset: -12px;
 }
 .abilities__inner-video video {
   height: 100%;
